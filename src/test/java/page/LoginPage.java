@@ -1,19 +1,19 @@
-import com.codeborne.selenide.Selenide;
+package page;
+
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.support.FindBy;
+import data.DataHelper;
+
+import static com.codeborne.selenide.Selenide.$;
 
 public class LoginPage {
-    @FindBy(css = "[data-test-id=login] input")
-    private SelenideElement loginField;
-    @FindBy(css = "[data-test-id=password] input")
-    private  SelenideElement passwordField;
-    @FindBy(css = "[data-test-id=action-login] input")
-    private SelenideElement loginButton;
+    private static SelenideElement loginField = $("[data-test-id=login] input");
+    private static SelenideElement passwordField =$("[data-test-id=password] input");
+    private static SelenideElement loginButton =$("[data-test-id=action-login]");
 
-    public VerificationPage validLogin(DataHelper.AuthInfo info) {
-        loginInput.setValue(info.getLogin());
-        passwordInput.setValue(info.getPassword());
-        buttonActionLogin.click();
+    public static VerificationPage validLogin(DataHelper.AuthInfo info) {
+        loginField.setValue(info.getLogin());
+        passwordField.setValue(info.getPassword());
+        loginButton.click();
         return new VerificationPage();
     }
 }
