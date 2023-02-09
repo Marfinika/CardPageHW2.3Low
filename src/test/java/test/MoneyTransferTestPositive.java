@@ -2,11 +2,13 @@ package test;
 
 import data.DataHelper;
 import lombok.val;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import page.LoginPage;
+import data.DataHelper;
+import page.LoginPage;
 import static com.codeborne.selenide.Selenide.open;
+import org.junit.jupiter.api.Assertions;
 
 
 public class MoneyTransferTestPositive {
