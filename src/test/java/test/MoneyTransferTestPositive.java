@@ -7,7 +7,9 @@ import org.junit.jupiter.api.Test;
 import page.LoginPage;
 import data.DataHelper;
 import page.LoginPage;
+
 import static com.codeborne.selenide.Selenide.open;
+
 import org.junit.jupiter.api.Assertions;
 
 
@@ -18,14 +20,6 @@ public class MoneyTransferTestPositive {
         val LoginPage = open("http://localhost:9999", LoginPage.class);
     }
 
-    @Test
-    void shouldVerify() {
-        var authInfo = DataHelper.getAuthInfo();
-        var verificationPage = LoginPage.validLogin(authInfo);
-        var verificationCode = DataHelper.getVerificationCodeFor(authInfo);
-        verificationPage.validVerify(verificationCode);
-
-    }
 
     @Test
     void shouldTransferMoney() {
@@ -49,7 +43,7 @@ public class MoneyTransferTestPositive {
     }
 
     @Test
-    void shouldErrorAmount(){
+    void shouldErrorAmount() {
         var authInfo = DataHelper.getAuthInfo();
         var verificationPage = LoginPage.validLogin(authInfo);
         var verificationCode = DataHelper.getVerificationCodeFor(authInfo);
