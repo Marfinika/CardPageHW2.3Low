@@ -20,11 +20,11 @@
 
 После логина, который уже мы сделали на лекции, вы получите список карт:
 
-![](pic/cards.png)
+![](https://raw.githubusercontent.com/Marfinika/aqa-homeworks/master/bdd/pic/cards.png)
 
 Нажав на кнопку «Пополнить», вы перейдёте на страницу перевода средств:
 
-![](pic/transfer.png)
+![](https://github.com/Marfinika/aqa-homeworks/blob/master/bdd/pic/transfer.png)
 
 При успешном переводе вы вернётесь назад на страницу со списком карт.
 
